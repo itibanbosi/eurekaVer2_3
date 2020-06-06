@@ -38,7 +38,7 @@ enum L9110moter {
 }
 
 
-//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.2"
+//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
 namespace eureka_blocks {
   //% shim=DS18B20::Temperature
   //% group="4_センサの値"
