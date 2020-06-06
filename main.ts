@@ -319,81 +319,74 @@ namespace eureka_blocks {
     }
   }
 //% color="#858585" weight=54 blockId=eureka_tl_blue block="ﾓｰﾀｰﾄﾞﾗｲﾊﾞｰL 動き|%mode| |%pin|" group="3_ユーレカ装置"
-export function eureka_moter_L(mode: moter_d, pin: eureka_denki) {
-  switch (pin) {
-    case eureka_denki.Aﾎﾟｰﾄ:
-      if (mode == moter_d.ﾏｴ) {
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        pins.digitalWritePin(DigitalPin.P13, 0);
-        pins.digitalWritePin(DigitalPin.P14, 1);
-      }
-      if (mode == moter_d.ｳｼﾛ) {
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        pins.digitalWritePin(DigitalPin.P13, 1);
-        pins.digitalWritePin(DigitalPin.P14, 0);
-      }
-      if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        pins.digitalWritePin(DigitalPin.P13, 1);
-        pins.digitalWritePin(DigitalPin.P14, 1);
-      }
-      if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        pins.digitalWritePin(DigitalPin.P13, 1);
-        pins.digitalWritePin(DigitalPin.P14, 0);
-      }
-      if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        pins.digitalWritePin(DigitalPin.P13, 1);
-        pins.digitalWritePin(DigitalPin.P14, 1);
-      }
-      if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        pins.digitalWritePin(DigitalPin.P13, 1);
-        pins.digitalWritePin(DigitalPin.P14, 0);
-      }
-    case eureka_denki.Bﾎﾟｰﾄ:
-      if (mode == moter_d.ﾏｴ) {
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        pins.digitalWritePin(DigitalPin.P15, 0);
-        pins.digitalWritePin(DigitalPin.P16, 1);
-      }
-      if (mode == moter_d.ｳｼﾛ) {
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        pins.digitalWritePin(DigitalPin.P15, 1);
-        pins.digitalWritePin(DigitalPin.P16, 0);
-      }
-      if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        pins.digitalWritePin(DigitalPin.P15, 1);
-        pins.digitalWritePin(DigitalPin.P16, 1);
-      }
-      if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        pins.digitalWritePin(DigitalPin.P15, 1);
-        pins.digitalWritePin(DigitalPin.P16, 0);
-      }
-      if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        pins.digitalWritePin(DigitalPin.P15, 1);
-        pins.digitalWritePin(DigitalPin.P16, 1);
-      }
-      if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        pins.digitalWritePin(DigitalPin.P15, 1);
-        pins.digitalWritePin(DigitalPin.P16, 0);
-      }
+  export function eureka_moter_L(mode: moter_d, pin: eureka_denki) {
+    switch (pin) {
+      case eureka_denki.Aﾎﾟｰﾄ:
+        if (mode == moter_d.ﾏｴ) {
+          pins.digitalWritePin(DigitalPin.P0, 1);
+          pins.digitalWritePin(DigitalPin.P13, 0);
+          pins.digitalWritePin(DigitalPin.P14, 1);
+        }
+        if (mode == moter_d.ｳｼﾛ) {
+          pins.digitalWritePin(DigitalPin.P0, 0);
+          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 0);
+        }
+        if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
+          pins.digitalWritePin(DigitalPin.P0, 0);
+          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 1);
+        }
+        if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
+          pins.digitalWritePin(DigitalPin.P0, 1);
+          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 0);
+        }
+        if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
+          pins.digitalWritePin(DigitalPin.P0, 0);
+          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 1);
+        }
+        if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
+          pins.digitalWritePin(DigitalPin.P0, 1);
+          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 0);
+        }
+      case eureka_denki.Bﾎﾟｰﾄ:
+        if (mode == moter_d.ﾏｴ) {
+          pins.digitalWritePin(DigitalPin.P1, 1);
+          pins.digitalWritePin(DigitalPin.P15, 0);
+          pins.digitalWritePin(DigitalPin.P16, 1);
+        }
+        if (mode == moter_d.ｳｼﾛ) {
+          pins.digitalWritePin(DigitalPin.P1, 0);
+          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 0);
+        }
+        if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
+          pins.digitalWritePin(DigitalPin.P1, 0);
+          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 1);
+        }
+        if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
+          pins.digitalWritePin(DigitalPin.P1, 1);
+          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 0);
+        }
+        if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
+          pins.digitalWritePin(DigitalPin.P1, 0);
+          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 1);
+        }
+        if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
+          pins.digitalWritePin(DigitalPin.P1, 1);
+          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 0);
+        }
+    }
   }
 
 
-    case eureka_tlp.Bﾎﾟｰﾄ:
-      if (mode == onoff.ON) {
-        return pins.digitalWritePin(DigitalPin.P16, 1);
-      } else {
-        return pins.digitalWritePin(DigitalPin.P16, 0);
-      }
-  }
-}
   //% color="#d4b41f"  weight=8 blockId=eureka_light block="単体_光ｾﾝｻ |%pin|" group="4_センサの値"
   export function tantai_light(pin: eureka_IO): number {
     switch (pin) {
