@@ -25,7 +25,8 @@ enum moter_d {
   ﾏｴ_ﾋﾀﾞﾘ,
   ﾏｴ_ﾐｷﾞ,
   ｳｼﾛ_ﾋﾀﾞﾘ,
-  ｳｼﾛ_ﾐｷﾞ
+  ｳｼﾛ_ﾐｷﾞ,
+  ﾃｲｼ
 }
 enum etc {
   AKARUSA,
@@ -334,12 +335,12 @@ namespace eureka_blocks {
         }
         if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
           pins.digitalWritePin(DigitalPin.P0, 0);
-          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 1);
         }
         if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
           pins.digitalWritePin(DigitalPin.P0, 1);
-          pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
         if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
@@ -350,6 +351,11 @@ namespace eureka_blocks {
         if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
           pins.digitalWritePin(DigitalPin.P0, 1);
           pins.digitalWritePin(DigitalPin.P13, 1);
+          pins.digitalWritePin(DigitalPin.P14, 0);
+        }
+        if (mode == moter_d.ﾃｲｼ) {
+          pins.digitalWritePin(DigitalPin.P0, 0);
+          pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
       case eureka_denki.Bﾎﾟｰﾄ:
@@ -365,12 +371,12 @@ namespace eureka_blocks {
         }
         if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
           pins.digitalWritePin(DigitalPin.P1, 0);
-          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 1);
         }
         if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
           pins.digitalWritePin(DigitalPin.P1, 1);
-          pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 0);
         }
         if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
@@ -381,6 +387,11 @@ namespace eureka_blocks {
         if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
           pins.digitalWritePin(DigitalPin.P1, 1);
           pins.digitalWritePin(DigitalPin.P15, 1);
+          pins.digitalWritePin(DigitalPin.P16, 0);
+        }
+        if (mode == moter_d.ﾃｲｼ) {
+          pins.digitalWritePin(DigitalPin.P1, 0);
+          pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 0);
         }
     }
