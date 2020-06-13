@@ -363,7 +363,7 @@ namespace eureka_blocks {
   }
 
 
-  //% color="#d4b41f"  weight=8 blockId=eureka_light block="単体_光ｾﾝｻ |%pin|" group="4_センサの値"
+  //% color="#d4b41f"  weight=7 blockId=eureka_light block="単体_光ｾﾝｻ |%pin|" group="4_センサの値"
   export function tantai_light(pin: eureka_IO): number {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
@@ -375,7 +375,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#d4b41f"  weight=8 block="単体_光ｾﾝｻ |%limit| より暗い |%pin|" group="4_センサの値"
+  //% color="#d4b41f"  weight=6 block="単体_光ｾﾝｻ |%limit| より暗い |%pin|" group="4_センサの値"
   //% limit.min=0 limit.max=100
   export function tantai_Light(limit: number, pin: eureka_IO): boolean {
     switch (pin) {
@@ -404,7 +404,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#858585" weight=9 block="単体_人が動いたら |%pin|" group="4_センサの値"
+  //% color="#858585" weight=8 block="単体_人が動いたら |%pin|" group="4_センサの値"
   export function tantai_humanDetection(pin: eureka_IO): boolean {
     pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
