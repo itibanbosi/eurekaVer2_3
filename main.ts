@@ -41,42 +41,7 @@ enum L9110moter {
 
 //% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
 namespace eureka_blocks {
-  //% shim=DS18B20::Temperature
-  //% group="4_センサの値"
-  export function Temperature(p: number): number {
-    // Fake function for simulator
-    return 0;
-  }
 
-  /*
-    //% color="#ff7b00" weight=7 blockId="Temperature_string" 
-    //% block="温度センサDS（文字返し） |%p|"
-    //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
-    //% group="4_センサの値"
-    export function TemperatureString(p: eureka_IO): string {
-        let temp = Temperature(p);
-        let x = Math.round((temp / 100))
-        let y = Math.round((temp % 100))
-        let z = ''
-        if (temp >= 0) {
-            z = x.toString()
-        }
-        else if (temp < 0) {
-            z = '-' + (-x).toString()
-        }
-        return z
-    }
-    */
-
-  //% weight=10 blockId="Temperature_number"
-  //% block="温度ｾﾝｻDS |%p|"
-  //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
-  //% group="4_センサの値"
-  export function TemperatureNumber(p: eureka_IO): number {
-    let temp = Temperature(p);
-    let x = Math.round(temp / 100);
-    return x;
-  }
 
   //% color="#4741f1" weight=54 blockId=eureka_tl_blue block="青信号 点灯|%mode| |%pin|" group="1_信号機ユニット"
   export function eureka_tl_blue(mode: onoff, pin: eureka_tlp) {
@@ -131,7 +96,7 @@ namespace eureka_blocks {
   }
 
   //% color="#1E90FF" weight=51 block="待ち時間（秒）|%second|" group="1_信号機ユニット"
-  //% second.min=0 second.max=60
+  //% second.min=0 second.max=20
   export function driveForwards(second: number): void {
     basic.pause(second * 1000);
   }
@@ -539,6 +504,44 @@ namespace eureka_blocks {
         return pins.analogReadPin(AnalogPin.P2) / 1023 * 100 ;
     }
   }
+
+  //% shim=DS18B20::Temperature
+  //% group="4_センサの値"
+  export function Temperature(p: number): number {
+    // Fake function for simulator
+    return 0;
+  }
+
+  /*
+    //% color="#ff7b00" weight=7 blockId="Temperature_string" 
+    //% block="温度センサDS（文字返し） |%p|"
+    //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
+    //% group="4_センサの値"
+    export function TemperatureString(p: eureka_IO): string {
+        let temp = Temperature(p);
+        let x = Math.round((temp / 100))
+        let y = Math.round((temp % 100))
+        let z = ''
+        if (temp >= 0) {
+            z = x.toString()
+        }
+        else if (temp < 0) {
+            z = '-' + (-x).toString()
+        }
+        return z
+    }
+    */
+
+  //% weight=10 blockId="Temperature_number"
+  //% block="温度ｾﾝｻDS |%p|"
+  //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
+  //% group="4_センサの値"
+  export function TemperatureNumber(p: eureka_IO): number {
+    let temp = Temperature(p);
+    let x = Math.round(temp / 100);
+    return x;
+  }
+
 }
 
 
