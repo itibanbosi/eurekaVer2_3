@@ -39,7 +39,7 @@ enum L9110moter {
 }
 
 
-//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
+//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.31"
 namespace eureka_blocks {
 
 
