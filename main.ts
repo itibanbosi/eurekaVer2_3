@@ -577,8 +577,8 @@ namespace eureka_blocks_car {
   //% blockId=servos_backward
   //% block="うしろにすすむ" group="基本のうごき"
   export function backward(): void {
-    pins.servoWritePin(AnalogPin.P13, 180);
-    pins.servoWritePin(AnalogPin.P14, 0);
+    pins.servoWritePin(AnalogPin.P14, 180);
+    pins.servoWritePin(AnalogPin.P13, 0);
   }
 
   //% blockId=servos_left
