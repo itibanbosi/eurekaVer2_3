@@ -570,15 +570,15 @@ namespace eureka_blocks_car {
   //% block="前に進む 出力調整 左へ |%le| 右へ" group="基本のうごき"
   //% le.min=-30 le.max=30
   export function forward(le: number): void {
-    pins.servoWritePin(AnalogPin.P13, 30 - le);
-    pins.servoWritePin(AnalogPin.P14, 150 - le);
+    pins.servoWritePin(AnalogPin.P14, 30 - le);
+    pins.servoWritePin(AnalogPin.P13, 150 - le);
   }
 
   //% blockId=servos_backward
   //% block="うしろにすすむ" group="基本のうごき"
   export function backward(): void {
-    pins.servoWritePin(AnalogPin.P13, 180);
-    pins.servoWritePin(AnalogPin.P14, 0);
+    pins.servoWritePin(AnalogPin.P14, 180);
+    pins.servoWritePin(AnalogPin.P13, 0);
   }
 
   //% blockId=servos_left
