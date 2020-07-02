@@ -598,8 +598,8 @@ namespace eureka_blocks_car {
   //% blockId=servos_stop
   //% block="とまる" group="基本のうごき"
   export function stop(): void {
-    pins.digitalWritePin(DigitalPin.P13, 0);
-    pins.digitalWritePin(DigitalPin.P14, 0);
+    pins.servoWritePin(AnalogPin.P13, 90);
+    pins.servoWritePin(AnalogPin.P14, 90);
   }
 
   //% blockId=servos_neutral
