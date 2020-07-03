@@ -130,6 +130,11 @@ namespace eureka_blocks {
     }
   }
   //% color="#009A00" weight=25 block="人が動いたら |%pin|" group="2_電気の利用ユニット"
+if (true) {
+
+} else {
+
+}
   export function humanDetection(pin: eureka_p1416): boolean {
     pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
@@ -548,7 +553,7 @@ namespace eureka_blocks {
 //% color="#3943c6" block="ﾕｰﾚｶ車" icon="\uf1b9"
 namespace eureka_blocks_car {
 
-  //% weight=6 blockId=sonar_ping_2 block="ﾕｰﾚｶ車距離ｾﾝｻ" group="基本のうごき"
+  //% weight=6 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="基本のうごき"
   export function ping() {
     // send
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
@@ -557,13 +562,30 @@ namespace eureka_blocks_car {
     pins.digitalWritePin(DigitalPin.P8, 1);
     control.waitMicros(10);
     pins.digitalWritePin(DigitalPin.P8, 0);
-
     // read
     const d = pins.pulseIn(DigitalPin.P16, PulseValue.High, 500 * 58);
-
     return Math.idiv(d, 58);
   }
 
+
+ //% weight=19 block="きょりが |%limit| 度より小さく" group="基本のうごき"
+ //% limit.min=0 limit.max=50
+  export function sonar_ping_3(limit: number): boolean {
+    // send
+    pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
+    pins.digitalWritePin(DigitalPin.P8, 0);
+    control.waitMicros(2);
+    pins.digitalWritePin(DigitalPin.P8, 1);
+    control.waitMicros(10);
+    pins.digitalWritePin(DigitalPin.P8, 0);
+    // read
+    const d = pins.pulseIn(DigitalPin.P16, PulseValue.High, 500 * 58);
+        if ( Math.idiv(d, 58)< limit ){
+            return true;
+            }else{
+            return false;
+        }
+    }   
 
 
   //% blockId=servos_forward
