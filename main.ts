@@ -568,7 +568,7 @@ namespace eureka_blocks_car {
   }
 
 
- //% weight=19 block="きょりが |%limit| 度より小さく" group="基本のうごき"
+ //% weight=19 block="きょりが |%limit| cmより小さく" group="基本のうごき"
  //% limit.min=0 limit.max=50
   export function sonar_ping_3(limit: number): boolean {
     // send
